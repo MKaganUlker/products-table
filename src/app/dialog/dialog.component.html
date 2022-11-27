@@ -1,0 +1,23 @@
+<p>ID: {{data[0]}}</p>
+<p>Title: {{data[1]}}</p>
+
+    <mat-form-field [formGroup]="form">
+      <p>sales</p>
+      <input id="sss"
+        matInput
+        formControlName="sales"
+        value="{{ sales }}"
+      />
+      <p>explanation</p>
+      <input id="eee"
+        matInput
+        formControlName="explanation"
+        value="{{ explanation }}"
+      />
+    </mat-form-field>
+
+
+<div mat-dialog-actions>
+    <button (click)="saveDialog()">Save</button>
+</div>
+
