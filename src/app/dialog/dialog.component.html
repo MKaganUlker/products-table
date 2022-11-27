@@ -2,14 +2,16 @@
 <p>Title: {{data[1]}}</p>
 
     <mat-form-field [formGroup]="form">
-      <p>sales</p>
+      <p>Sales</p>
       <input id="sss"
+        type="number"
         matInput
         formControlName="sales"
         value="{{ sales }}"
       />
-      <p>explanation</p>
+      <p>Description</p>
       <input id="eee"
+      title="For some reason explanation part cannot be clicked but reaching there with Tab button works"
         matInput
         formControlName="explanation"
         value="{{ explanation }}"
@@ -18,6 +20,6 @@
 
 
 <div mat-dialog-actions>
-    <button (click)="saveDialog()">Save</button>
+    <button (click)="saveDialog()" id="SaveButton">Save</button>
 </div>
 

@@ -9,6 +9,7 @@ import { DialogComponent } from './dialog/dialog.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule , ReactiveFormsModule} from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,6 @@ import { FormsModule , ReactiveFormsModule} from '@angular/forms';
     MatInputModule,
     FormsModule,
     ReactiveFormsModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]

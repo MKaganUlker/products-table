@@ -8,15 +8,17 @@
     max-width: 100%;
 }
 .mat-cell{
-    border-right: 1px solid currentColor;
+    border: 1px solid currentColor;
     text-align: center;
 }
 .mat-header-cell{
     text-align: center;
     font-weight: bold;
     font-size: 16px;
+    border: 1px solid currentColor;
+    padding: 10px;
 }
-.mat-row:hover .mat-cell {
+.mat-row:hover{
     border-color: currentColor;
     background-color: gray;
 }
@@ -25,4 +27,13 @@
     background-color: red;
 }
 
+#ButtonColumn{
+    padding: 10px;
+}
+#ButtonHeader{
+    padding: 0%;
+}
+#IDHeader{
+    padding: 0%;
+}
 

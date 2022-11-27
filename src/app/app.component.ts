@@ -1,9 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,ViewChild} from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import {MatSort, Sort} from '@angular/material/sort';
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog"
 import { DialogComponent } from './dialog/dialog.component';
-import {MatTooltipModule} from '@angular/material/tooltip'
 
 @Component({
   selector: 'app-root',
@@ -14,16 +13,18 @@ export class AppComponent implements OnInit{
   title = 'products-table';
   public data:any = []
   columnsToDisplay = ['ID','Title','Category','Description','Brand','Discount Percentage','Image','Price','Rating','Stock','Sales','Button'];
+
   constructor(public http: HttpClient,private dialog:MatDialog) {
    
  }
+ 
 
  getData(){
    const url ='https://dummyjson.com/products'
    this.http.get(url).subscribe((res:any)=>{
      this.data = res
      this.data = this.data.products
-     this.data.map(function (element: { sales: string; }) {});
+     this.data.map(function (element: { sales: number; }) {});
      this.data.map(function (element: { explanation: string; }) {});
      console.log(this.data)
    })
